@@ -1,0 +1,268 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    color: #c9d1d9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* ===== App Container ===== */
+.app-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #58a6ff;
+}
+
+.subtitle {
+    color: #8b949e;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+/* ===== Input Section ===== */
+.input-section {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+#todoInput {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#todoInput:focus {
+    border-color: #58a6ff;
+}
+
+#prioritySelect {
+    padding: 12px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+}
+
+#addBtn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #238636;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#addBtn:hover {
+    background: #2ea043;
+}
+
+/* ===== Filters ===== */
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.filter-btn {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    background: transparent;
+    color: #8b949e;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+.filter-btn.active {
+    background: #1f6feb;
+    border-color: #1f6feb;
+    color: #fff;
+}
+
+/* ===== Stats ===== */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 4px;
+    margin-bottom: 12px;
+    font-size: 0.8rem;
+    color: #8b949e;
+}
+
+/* ===== Todo List ===== */
+.todo-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.2s;
+}
+
+.todo-item:hover {
+    border-color: #484f58;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #484f58;
+}
+
+.todo-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #30363d;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.todo-checkbox:hover {
+    border-color: #58a6ff;
+}
+
+.todo-item.completed .todo-checkbox {
+    background: #238636;
+    border-color: #238636;
+}
+
+.todo-item.completed .todo-checkbox::after {
+    content: '✓';
+    color: #fff;
+    font-size: 12px;
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.priority-badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.priority-low {
+    background: #0d419d33;
+    color: #58a6ff;
+}
+
+.priority-medium {
+    background: #9e6a0333;
+    color: #d29922;
+}
+
+.priority-high {
+    background: #8b130033;
+    color: #f85149;
+}
+
+.todo-date {
+    font-size: 0.7rem;
+    color: #484f58;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #484f58;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.todo-item:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn:hover {
+    color: #f85149;
+    background: #f8514922;
+}
+
+/* ===== Actions ===== */
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    background: transparent;
+    color: #8b949e;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.actions button:hover {
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #484f58;
+    font-size: 0.95rem;
+}

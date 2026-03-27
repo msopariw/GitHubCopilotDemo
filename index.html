@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - GitHub Copilot Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>📝 Todo App</h1>
+            <p class="subtitle">GitHub Copilot Features Demo</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="todoInput" placeholder="What needs to be done?" autofocus>
+            <select id="prioritySelect">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="addBtn" onclick="addTodo()">Add</button>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">All</button>
+            <button class="filter-btn" data-filter="active" onclick="setFilter('active')">Active</button>
+            <button class="filter-btn" data-filter="completed" onclick="setFilter('completed')">Completed</button>
+        </div>
+
+        <div class="stats">
+            <span id="totalCount">0 total</span>
+            <span id="activeCount">0 active</span>
+            <span id="completedCount">0 completed</span>
+        </div>
+
+        <ul id="todoList" class="todo-list"></ul>
+
+        <div class="actions">
+            <button onclick="clearCompleted()">Clear Completed</button>
+            <button onclick="exportTodos()">Export JSON</button>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

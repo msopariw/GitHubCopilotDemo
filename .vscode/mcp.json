@@ -1,0 +1,37 @@
+{
+    "mcpServers": {
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@anthropic/mcp-filesystem",
+                "${workspaceFolder}"
+            ]
+        },
+        "github": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@anthropic/mcp-github"
+            ],
+            "env": {
+                "GITHUB_TOKEN": "${input:githubToken}"
+            }
+        },
+        "fetch": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@anthropic/mcp-fetch"
+            ]
+        }
+    },
+    "inputs": [
+        {
+            "id": "githubToken",
+            "type": "promptString",
+            "description": "GitHub Personal Access Token for MCP GitHub integration",
+            "password": true
+        }
+    ]
+}
