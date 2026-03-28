@@ -2,6 +2,8 @@
 
 A simple todo application built with vanilla HTML, CSS, and JavaScript using browser localStorage. Designed as a demo workspace to showcase GitHub Copilot's customization features.
 
+New LIne inserted
+
 ## Quick Start
 
 Open `index.html` in a browser — no build tools or server required.
