@@ -102,6 +102,7 @@ function renderTodos() {
             <span class="todo-text">${escapeHtml(todo.text)}</span>
             <span class="priority-badge priority-${todo.priority}">${todo.priority}</span>
             <span class="todo-date">${formatDate(todo.createdAt)}</span>
+            ${todo.completed && todo.completedAt ? `<span class="completed-date">✓ ${escapeHtml(formatDate(todo.completedAt))}</span>` : ''}
             <button class="delete-btn" onclick="deleteTodo('${todo.id}')" title="Delete">✕</button>
         </li>
     `).join('');

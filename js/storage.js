@@ -26,9 +26,15 @@ const TodoStorage = {
     },
 
     toggle(id) {
-        const todos = this.getAll().map(t =>
-            t.id === id ? { ...t, completed: !t.completed } : t
-        );
+        const todos = this.getAll().map(t => {
+            if (t.id !== id) return t;
+            const completed = !t.completed;
+            return {
+                ...t,
+                completed,
+                completedAt: completed ? new Date().toISOString() : null
+            };
+        });
         this.saveAll(todos);
         return todos;
     },

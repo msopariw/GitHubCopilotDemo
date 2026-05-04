@@ -215,6 +215,12 @@ header h1 {
     color: #484f58;
 }
 
+.completed-date {
+    font-size: 0.7rem;
+    color: #238636;
+    white-space: nowrap;
+}
+
 .delete-btn {
     background: none;
     border: none;
