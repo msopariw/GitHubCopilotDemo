@@ -29,6 +29,12 @@
             <button class="filter-btn" data-filter="completed" onclick="setFilter('completed')">Completed</button>
         </div>
 
+        <div class="sort-controls">
+            <button class="sort-btn active" data-sort="none" onclick="setSortOrder('none')">Default</button>
+            <button class="sort-btn" data-sort="high-to-low" onclick="setSortOrder('high-to-low')">High → Low</button>
+            <button class="sort-btn" data-sort="low-to-high" onclick="setSortOrder('low-to-high')">Low → High</button>
+        </div>
+
         <div class="stats">
             <span id="totalCount">0 total</span>
             <span id="activeCount">0 active</span>
